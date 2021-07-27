@@ -1,0 +1,27 @@
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using Application.Requests;
+using Domain.DTO;
+using MediatR;
+using Microsoft.AspNetCore.Mvc;
+
+namespace API.Controllers
+{
+    [ApiController]
+    [Route("api/job-application")]
+    public class JobApplicationController : ControllerBase
+    {
+        public IMediator _mediator { get; }
+        public JobApplicationController(IMediator mediator)
+        {
+            _mediator = mediator;
+        }
+
+        [Route("list-all")]
+        [HttpGet]
+        public async Task<ActionResult<List<JobApplicationDTO>>> ListApplications()
+        {
+            return await _mediator.Send(new ListApplications());
+        }
+    }
+}
