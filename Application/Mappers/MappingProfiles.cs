@@ -11,7 +11,15 @@ namespace Application.Mappers
     {
         public MappingProfiles()
         {
+            // mapping
+            CreateMap<Company, CompanyDTO>();
             CreateMap<JobApplication, JobApplicationDTO>();
+            CreateMap<JobApplicationProgress, JobApplicationProgressDTO>();
+
+            // reverse mapping
+            CreateMap<CompanyDTO, Company>();
+            CreateMap<JobApplicationDTO, JobApplication>();
+            CreateMap<JobApplicationProgressDTO, JobApplicationProgress>();
         }
     }
 }

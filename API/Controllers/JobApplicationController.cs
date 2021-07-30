@@ -5,6 +5,7 @@ using Domain.DTO;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
+// api controller for CRUD operations related to job applications
 namespace API.Controllers
 {
     [ApiController]

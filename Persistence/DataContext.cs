@@ -9,6 +9,8 @@ namespace Persistence
         {
         }
 
+        public DbSet<Company> Companies { get; set; }
         public DbSet<JobApplication> Applications { get; set; }
+        public DbSet<JobApplicationProgress> Progresses { get; set; }
     }
 }
