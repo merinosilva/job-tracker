@@ -5,6 +5,6 @@ namespace Application.Requests
 {
     public class SaveProgress : IRequest<Unit>
     {
-        public JobApplicationProgressDTO MyProperty { get; set; }
+        public JobApplicationProgressDTO Progress { get; set; }
     }
 }

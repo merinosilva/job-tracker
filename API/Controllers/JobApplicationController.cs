@@ -27,7 +27,7 @@ namespace API.Controllers
 
         [Route("save")]
         [HttpPost]
-        public async Task<IActionResult> UpdateQuiz(JobApplicationDTO application)
+        public async Task<IActionResult> SaveApplication(JobApplicationDTO application)
         {
             return Ok(await _mediator.Send(new SaveApplication{Application = application}));
         }
