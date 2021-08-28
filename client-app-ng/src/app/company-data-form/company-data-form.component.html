@@ -1,1 +1,9 @@
-<p>company-data-form works!</p>
+<div class="col-xs-12">
+    <label>Name</label>
+    <input type="text" class="form-control" [(ngModel)]="company.name"/>
+    <label>Location</label>
+    <input type="text" class="form-control" [(ngModel)]="company.location"/>
+    <label>Website</label>
+    <input type="text" class="form-control" [(ngModel)]="company.website"/>
+    <button class="btn btn-primary" (click)="onSaveCompany()">Save</button>
+</div>

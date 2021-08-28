@@ -9,6 +9,6 @@ namespace Domain.DTO
         public string Name { get; set; }
         public string Location { get; set; }
         public string Website { get; set; }
-        public virtual ICollection<JobApplicationDTO> applications { get; set; }
+        // public virtual ICollection<JobApplicationDTO> applications { get; set; }
     }
 }
